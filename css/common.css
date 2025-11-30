@@ -66,7 +66,6 @@
 .logo img {
     display: block;
     height: 4rem;
-    background-color: #fff;
     margin: 0 6rem 0 0;
 }
 
@@ -493,12 +492,11 @@ background-repeat: no-repeat;
 
 .PROF{
     display: flex;
-    justify-content: center;
-}
+    justify-content: center;}
 
 .PROF-PIC{
-    width: 5vw;
-    height: 110vh;
+    margin: 0 0 0 2.5vw;
+    height: 80vh; 
     background-image: url(../img/mary-tatie.png);
     background-repeat: cover;
     background-repeat: no-repeat;
@@ -508,9 +506,10 @@ background-repeat: no-repeat;
 .PROFnarabi{
     padding: 1.5vw;
 
+
 }
 .PROF-PICnarabi{
-
+    margin: 5vh 0 0 15vw;
     display: flex;
     flex-wrap: wrap;
 }
@@ -554,11 +553,7 @@ background-repeat: no-repeat;
 .PROF-PICc:hover  ~.PROF-PIC{
     background-image: url(../img/mary-tatieTEST3.png);
 }
-.PROF-00{
-    margin: 0 0 0 10vw;
 
-    
-}
 
 .PROF-01 img{
     width: 25vw;
@@ -612,16 +607,32 @@ background-repeat: no-repeat;
     text-align: center;
     background-color: #D9799C;
 }
-.KOUJI{
-    margin: 0;
-    padding-bottom: 6vh;
-    font-size: 15vh;
-    font-family: "Dela Gothic One";
-    color: #ffffff;
-    text-align: center;
-    background-color: #D9799C;
+.music01{
+    width:48vw;
+    height: 27vw;
+}
+.MUSIC-matome{
+    display: flex;
+    justify-content: center;
 }
 
+.music-setumei{
+    text-align: center;
+}
+.music-setumei2:nth-child(1){
+    margin: 2vh auto;
+    font-size: 4vh;
+    color: #fff;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke;
+}
+.music-setumei2:nth-child(2){
+    margin: 4vh auto;
+    font-size: 3vh;
+    line-height: 6vh;
+
+}
 
 /* 常に右下にあるアイコン */
 
