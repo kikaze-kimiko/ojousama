@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/lightbox.css">
 
 
@@ -19,31 +19,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <script src="js/jquery-3.6.1.min.js"></script>
 
-    	<!--スクリプト slick -->
-	<script src="js/slick.min.js"></script>
-	<script>
-    $(function(){
-      $('.gazouall').slick({
-        autoplay:true,
-        autoplaySpeed:2000,
-        dots:true,
-        pauseOnHover:true,
-      });
-    }); 
-	</script>
+    <!--スクリプト slick -->
+    <script src="js/slick.min.js"></script>
+    <script>
+        $(function () {
+            $('.gazouall').slick({
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: true,
+                pauseOnHover: true,
+            });
+        }); 
+    </script>
     <!-- light box -->
-      <script src="js/lightbox.min.js"></script>
-  <script>
-    lightbox.option({
-      'fitImagesInViewport' : true,
-      'showImageNumberLabel': true,
-      'alwaysShowNavOnTouchDevices': false,
-      'fadeDuration': 100,
-      'resizeDuration': 500,
-      'positionFromTop': 50,
-      'wrapAround': true,
-    })
-  </script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            'fitImagesInViewport': true,
+            'showImageNumberLabel': true,
+            'alwaysShowNavOnTouchDevices': false,
+            'fadeDuration': 100,
+            'resizeDuration': 500,
+            'positionFromTop': 50,
+            'wrapAround': true,
+        })
+    </script>
 
 
     <!-- スクリプト：ロードアニメ↓ -->
@@ -88,17 +88,16 @@
 
             <nav class="nav">
                 <ul>
-
                     <li><a href="#news">
                             <div class="c-btn-slide">NEWS</div>
                         </a></li>
                     <li><a href="#PROFILE">
                             <div class="c-btn-slide">PROFILE</div>
                         </a></li>
-                    <li><a href="index.html">
+                    <li><a href="#MUSIC">
                             <div class="c-btn-slide">MUSIC</div>
                         </a></li>
-                    <li><a href="https://www.fanbox.cc/">
+                    <li><a href="https://www.fanbox.cc/" target="_blank">
                             <div class="c-btn-slide">FANBOX</div>
                         </a></li>
                     <li><a href="https://booth.pm/ja" target="_blank">
@@ -125,11 +124,15 @@
             </li>
             <li class="sns-icon">
                 <a href="http://x.com/?lang=ja" target="_blank">
-
                     <img src="img/xrogo.png" class="sns-icon-img">
                 </a>
             </li>
         </ul>
+        <li class="yubi">
+            <a href="#ichibann">
+                <img src="img/teue.png" class="sns-icon-img">
+            </a>
+        </li>
 
 
 
@@ -137,7 +140,7 @@
 
 
         <div class="SUMAHO"></div>
-        <main>
+        <main id="ichibann">
             <div class="main-visual">
 
 
@@ -217,13 +220,23 @@
 
                     </div>
                     <ul class="gazouall">
-                        <li class="room"><img src="img/gazou1.jpg"></li>
-                        <li class="room"><img src="img/gazou2.png"></li>
-                        <li class="room"><img src="img/gazou3.png"></li>
+                        <a href="img/gazou1.jpg" data-lightbox="group01" title="自己紹介カード">
+                            <li class="room"><img src="img/gazou1.jpg"></li>
+                        </a>
+                        <a href="img/gazou2.png" data-lightbox="group01" title="金降り背景画像">
+                            <li class="room"><img src="img/gazou2.png"></li>
+                        </a>
+                        <a href="img/gazou3.png" data-lightbox="group01" title="部屋">
+                            <li class="room"><img src="img/gazou3.png"></li>
+                        </a>
                     </ul>
 
                 </div>
             </div>
+
+            <div id="MUSIC">
+                <h2 class="MUSIC fadein-00">MUSIC</h2>
+                <p class="KOUJI fadein-00">現在工事中！</p>
 
 
 
