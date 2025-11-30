@@ -1,0 +1,21 @@
+ @charset "UTF-8";
+
+
+
+.txt {
+    display: flex;
+    overflow: hidden;
+
+  animation: trigger steps(1) forwards;
+  animation-timeline: view();
+  animation-range: cover 20% cover 30%;
+}
+.txt p{
+    color: cadetblue;
+    font-size: 5vh;
+    font-weight: bold;
+    letter-spacing: .06em;
+    margin: 0;
+}
+
+

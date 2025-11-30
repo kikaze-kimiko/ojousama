@@ -1,0 +1,702 @@
+@charset "UTF-8";
+
+/* ↓ロード画面 */
+/* ほぼ背景を置いてるだけ */
+#loading-gif-flower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../img/haikei1.png);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+}
+
+/* 真ん中のマークの位置　中央に置く */
+#loading-gif-mark {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+}
+
+/* GIF の大きさ調整（任意） */
+.loading-flower {
+    width: 100%;
+    /* 必要に応じて変更 */
+}
+
+/* ここにで一旦本編を全て消しとく */
+#main-all {
+    display: none;
+}
+
+/* フェードアウトアニメーション */
+.fadeout {
+    opacity: 0;
+    transition: opacity 3s ease-in;
+}
+
+/* ↑ロード画面 */
+
+/* ↓ヘッダー　レスポンシブ付き */
+/* ----------------------
+    基本デザイン
+---------------------- */
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: #D9799C;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    display: block;
+    height: 4rem;
+    background-color: #fff;
+    margin: 0 6rem 0 0;
+}
+
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav ul li a {
+    font-family: "Dela Gothic One";
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    /* ← これを追加 */
+    display: inline-block;
+    /* 中央揃えを有効にするため */
+}
+
+.nav ul li a:hover {
+    opacity: 60%;
+}
+
+
+.logo {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* ----------------------
+    ハンバーガー
+---------------------- */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+/* ----------------------
+    スマホ表示
+---------------------- */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        /* 初期は非表示 */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #D9799C;
+        width: 200px;
+    }
+
+    .nav ul li {
+        font-family: "Dela Gothic One";
+        font-weight: 400;
+        font-style: normal;
+        line-height: 2rem;
+        display: block;
+
+    }
+
+    .nav ul li:nth-child(6) {
+        padding: 0.5rem 0 0 0;
+        line-height: 1;
+        /* 1にすることで余白を最小化 */
+        display: inline-block;
+        /* <br> の中央揃えにも対応 */
+    }
+
+    .nav ul li:nth-child(7) {
+        padding: 1rem 0 0 0;
+        line-height: 1;
+        /* 1にすることで余白を最小化 */
+        display: inline-block;
+        /* <br> の中央揃えにも対応 */
+    }
+
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* メニュー表示時に使うクラス */
+    .nav.active {
+        display: block;
+    }
+}
+
+/* ↓ボタンのアニメーション */
+
+.c-btn-slide {
+    cursor: pointer;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.c-btn-slide {
+    background: #D9799C;
+    border-radius: 60px;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    max-width: 300px;
+    padding: 15px 40px;
+    text-align: center;
+}
+
+.c-btn-slide {
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.c-btn-slide::after {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.c-btn-slide:hover {
+    color: #D9799C;
+}
+
+.c-btn-slide:hover::after {
+    transform: scale(1, 1);
+}
+
+
+/* ↑ヘッダーレスポンシブ付き */
+
+main{
+    background-color: rgba(219, 219, 219, 0.267);
+    background-image: url(../img/haikei1.png);
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+background-position: center;
+background-image: url(../img/money-back.gif);
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+
+
+.lookat{
+    position: relative;
+    width: 40%;
+    height: 40%;
+    top: 15vh;
+    left: 50vw;
+}
+
+.rogo-main{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+}
+.youtube-top{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 60vh;
+    left:40vh
+
+}
+ 
+/* メイン立ち絵が登場ぽよよん */
+.lookat{
+  animation: poyoyon2 1s ease-in-out forwards;
+}
+ 
+@keyframes poyoyon2 {
+  0%  {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  15% {
+    transform: scale(0.98, 0.9) translate(0, 5px);
+  }
+  30% {
+    transform: scale(1.02, 1.0) translate(0, 8px);
+  }
+  50% {transform: scale(0.98, 1.05) translate(0, -8px);
+  }
+  70% {
+    transform: scale(1.0, 0.9) translate(0, 5px);
+  }
+  100% {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  0%, 100% {
+    opacity: 1;
+  }
+}
+
+.hukidasi img{
+    width: 60%;
+    /* background-color: #4FC4EA; */
+    position: absolute;
+    position: relative;
+    top: -15vh;
+    left: 15vw;
+}
+
+.txt {
+    display: flex;
+    overflow: hidden;
+}
+
+.txt p{
+    color: cadetblue;
+    font-size: 5vh;
+    font-weight: bold;
+    letter-spacing: .06em;
+    margin: 0;
+}
+    /* ここからアニメーション関係 */
+.fire-pon2
+{transform: translateY(2em);
+    animation: textanimation 1s forwards;
+}
+/* 1文字目 */
+.txt p:nth-child(1) {
+    animation-delay: 0.2s
+}
+/* 2文字目 */
+.txt p:nth-child(2) {
+    animation-delay: 0.4s
+}
+/* 3文字目 */
+.txt p:nth-child(3) {
+    animation-delay: 0.6s
+}
+/* 4文字目 */
+.txt p:nth-child(4) {
+    animation-delay: 0.8s
+}
+/* 5文字目 */
+.txt p:nth-child(5) {
+    animation-delay: 1s
+}
+/* 6文字目 */
+.txt p:nth-child(6) {
+    animation-delay: 1.2s
+}
+/* 7文字目 */
+.txt p:nth-child(7) {
+    animation-delay: 1.4s
+}
+/* 8文字目 */
+.txt p:nth-child(8) {
+    animation-delay: 1.6s
+}
+/* 9文字目 */
+.txt p:nth-child(9) {
+    animation-delay: 1.8s
+}
+/* 10文字目 */
+.txt p:nth-child(10) {
+    animation-delay: 2s
+}
+/* 11文字目 */
+.txt p:nth-child(11) {
+    animation-delay: 2.2s
+}
+/* 12文字目 */
+.txt p:nth-child(12) {
+    animation-delay: 2.4s
+}
+/* 13文字目 */
+.txt p:nth-child(13) {
+    animation-delay: 2.6s
+}
+/* 14文字目 */
+.txt p:nth-child(14) {
+    animation-delay: 2.8s
+}
+/* 15文字目 */
+.txt p:nth-child(15) {
+    animation-delay: 3s
+}
+/* 16文字目 */
+.txt p:nth-child(16) {
+    animation-delay: 3.2s
+}
+/* 小田マリー */
+.txt p:nth-child(17){
+    animation-delay: 3.8s
+}
+@keyframes textanimation {
+    0% {
+        transform: translateY(2em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* 下ニュース用 */
+
+#news{
+    margin: 500vh auto;
+    object-fit: contain;
+    width: 100%;
+    height: 60vh;
+    padding: 5vh 0 30vh 0;
+    background-color: #D9799C;
+    display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+
+}
+
+.newsUE{
+    display: flex;
+    justify-content: center;
+}
+
+.newsrogo{
+    padding-bottom: 7vh;
+    font-size: 20vh;
+    font-family: "Dela Gothic One";
+    color: #ffffff;
+}
+
+.news0{
+    display: flex;
+    justify-content: center;
+    line-height: 12vh;
+    margin: 2vh;
+
+}
+
+.newskizi-nakami{
+    font-size: 4vh;
+    margin: 0 0 0 5vh;
+}
+
+.news1{
+    font-family: "Dela Gothic One";
+    color: #fff;
+    font-size: 6vh;
+    background-color: #F2845C;
+    border-radius: 60%;
+    padding: 0vh 3vh;
+
+    
+}
+.news2{
+    font-family: "Dela Gothic One";
+    color: #fff;
+    font-size: 6vh;
+    background-color: #4FC4EA;
+    border-radius: 60%;
+    padding: 0vh 3vh;
+}
+.news3{
+    font-family: "Dela Gothic One";
+    color: #fff;
+    font-size: 6vh;
+    background-color: #F2845C;
+    border-radius: 60%;
+    padding: 0vh 3vh;
+}
+
+
+.atama-wink img{
+    width: 75%;
+}
+
+.atama-winkL img{
+    transform: rotate(-25deg);
+
+}
+
+
+.atama-winkR img{
+    transform: rotate(25deg);
+}
+.fire-pon{
+  animation: poyoyon2 1s ease-in-out forwards;
+}
+ 
+@keyframes poyoyon2 {
+  0%  {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  15% {
+    transform: scale(0.98, 0.9) translate(0, 5px);
+  }
+  30% {
+    transform: scale(1.02, 1.0) translate(0, 8px);
+  }
+  50% {transform: scale(0.98, 1.05) translate(0, -8px);
+  }
+  70% {
+    transform: scale(1.0, 0.9) translate(0, 5px);
+  }
+  100% {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  0%, 100% {
+    opacity: 1;
+  }
+}
+
+
+/* ↓スクロールフェードインニュース */
+.fadein-00 {
+    /* width: 100%; */
+    /* margin-bottom: 100px; */
+    opacity: 0; /* 最初は非表示にしておく */
+    transition: all 0.5s; /* 動きを滑らかに */
+}
+/* フェードイン用のクラス */
+.fadeIn {
+    opacity: 1;
+}
+
+.fireset {
+    /* width: 100%; */
+    /* margin-bottom: 100px; */
+    opacity: 0; /* 最初は非表示にしておく */
+}
+
+
+
+.PROFILE{
+    margin: 3vh  auto;
+    padding-bottom: 7vh;
+    font-size: 15vh;
+    font-family: "Dela Gothic One";
+    color: #ffffff;
+    text-align: center;
+    background-color: #D9799C;
+}
+
+
+.PROF{
+    display: flex;
+    justify-content: center;
+}
+
+.PROF-PIC{
+
+    height: 654px;
+    background-image: url(../img/mary-tatie.png);
+    background-repeat: cover;
+    background-repeat: no-repeat;
+    transition: none;
+
+}
+.PROFnarabi{
+    padding: 0.5vw;
+
+}
+.PROF-PICnarabi{
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.PROF-PICnarabi li:last-child {
+    flex-basis: 100%;
+    
+    
+}
+
+.PROF-PICa{
+    width: 5vw;
+    height: 11.5vh;
+    background-image: url(../img/POROFTEST1.jpg);
+        background-repeat: cover;
+    background-repeat: no-repeat;
+
+}
+
+.PROF-PICb{
+    width: 5vw;
+    height: 11.5vh;
+    background-image: url(../img/PROFSTES2.jpg);
+        background-repeat: cover;
+    background-repeat: no-repeat;
+}
+
+.PROF-PICc{
+    width: 5vw;
+    height: 11.5vh;
+    background-image: url(../img/PROFSTES3.jpg);
+        background-repeat: cover;
+    background-repeat: no-repeat;
+}
+.PROF-PICa:hover  ~.PROF-PIC{
+    background-image: url(../img/mary-tatieTEST.png);
+}
+.PROF-PICb:hover  ~.PROF-PIC{
+    background-image: url(../img/mary-tatieTEST2.png);
+}
+.PROF-PICc:hover  ~.PROF-PIC{
+    background-image: url(../img/mary-tatieTEST3.png);
+}
+.PROF-00{
+    margin: 0 0 0 10vw;
+
+    
+}
+
+.PROF-01 img{
+    width: 25vw;
+}
+.PROF-01{
+    margin: 5vh;
+}
+
+
+
+
+
+/* 常に右下にあるアイコン */
+
+.sns-link {
+    position: fixed;
+    right: 20vh;    /* 右端からの距離 */
+    bottom:8vh;  /* 下端からの距離 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 200;
+}
+
+/* 縦に並べる */
+.sns-link li {
+    margin-bottom: 20vh;
+}
+
+.sns-link li:last-child {
+    margin-bottom: 0;
+}
+
+/* アイコン画像（レスポンシブ対応） */
+.sns-icon-img{
+    transform:scale(5);
+    width: 5vh;
+    height: auto;
+    transition: transform 0.3s;
+    transform-origin: center;
+    display: block;
+
+}
+
+/* ホバー時アニメーション */
+.sns-icon-img:hover {
+    transform: scale(4);
+
+}
+
+
+
+/* マウスカーソル追う */
+
+ .container {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+ }
+
+ .lookat {
+    position: relative;
+    display: block;
+    will-change: transform;
+}
+
+
+
+/* ↓fotter */
+
+.footer-A{
+    width: 100%;
+    height: 10vh;
+    background-color: #F2DFA7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.copy-odamary{
+    height: 50%;
+    color: #4b4b4b;
+}
+
+
